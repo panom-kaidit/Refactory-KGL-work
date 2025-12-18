@@ -120,3 +120,39 @@ console.log(`average daily tonnage: ${avarageDailyTonnage}`);
 
 // creating an array of sales records
 
+let salesRecordArray=[
+    createSalesRecord("Beans", 1000, "Habo Bab", 40000),
+    createSalesRecord("Maize", 1500, "Bob Joe", 60000),
+    createSalesRecord("G-nuts", 800, "Carol Doe", 30000),
+    createSalesRecord("Soybeans", 2000, "David Doe", 70000),
+    createSalesRecord("Cow peas", 900, "Eve Doe", 35000)
+]
+
+// Manually marking some as credit sales
+salesRecordArray[1].isCreditSale = true;
+salesRecordArray[3].isCreditSale = true;
+
+let creditSalesCount = 0;
+
+for (let record of salesRecordArray) {
+    if (record.isCreditSale !== true) {
+        continue;
+    }
+    creditSalesCount++;
+}
+
+console.log(`Total credit sales: ${creditSalesCount}`);
+
+// 9. Inventory stock check with break
+let inventory = [
+    { name: "Beans", tonnage: 500 },
+    { name: "Maize", tonnage: 0 },
+    { name: "G-nuts", tonnage: 300 }
+];
+
+for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].tonnage === 0) {
+        console.log(`Manager Alert: ${inventory[i].name} is out of stock`);
+        break;
+    }
+}

@@ -121,9 +121,9 @@ if (userRole === 'Sales Agent') {
         
     }
 /*
-    =================
-        OUTPUT 
-    ================
+=================
+    OUTPUT 
+================
     ******Error!******
 Your are not allowed to record any entry
 */
