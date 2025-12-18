@@ -81,6 +81,7 @@ console.log("Invalid dealer name");
                 OUTPUT
             ==================== 
             James Bond
+            Cleaned Dealer Name: James Bond
             Valid dealer name
 */
 
@@ -119,6 +120,13 @@ if (userRole === 'Sales Agent') {
         
         
     }
+/*
+    =================
+        OUTPUT 
+    ================
+    ******Error!******
+Your are not allowed to record any entry
+*/
 
 /* 
 ======================================
